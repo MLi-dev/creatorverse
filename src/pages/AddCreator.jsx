@@ -8,7 +8,7 @@ const AddCreator = () => {
 		twitter: "",
 		instagram: "",
 		description: "",
-		image: "",
+		imageURL: "",
 	});
 
 	const handleChange = (event) => {
@@ -59,9 +59,9 @@ const AddCreator = () => {
 				<label>Image</label>
 				<input
 					type='text'
-					id='image'
-					name='image'
-					value={creator.image}
+					id='imageURL'
+					name='imageURL'
+					value={creator.imageURL}
 					onChange={handleChange}
 					required
 				/>

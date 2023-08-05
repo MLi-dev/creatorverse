@@ -4,15 +4,15 @@ import { supabase } from "../client";
 import Card from "../components/Card";
 
 const ViewCreator = ({ data }) => {
-	const navYouTube = () => {
+	const navToYouTube = () => {
 		window.open("https://www.youtube.com/@" + creator.youtube, "_blank");
 	};
 
-	const navTwitter = () => {
+	const navToTwitter = () => {
 		window.open("https://www.twitter.com/" + creator.twitter, "_blank");
 	};
 
-	const navInstagram = () => {
+	const navToInstagram = () => {
 		window.open("https://www.instagram.com/" + creator.instagram, "_blank");
 	};
 	const { id } = useParams();
