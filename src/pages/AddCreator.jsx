@@ -56,13 +56,7 @@ const AddCreator = () => {
 					required
 				/>
 
-				<label>
-					Image
-					<p>
-						Provide a link to an image of your creator. Be sure to include the
-						http://
-					</p>
-				</label>
+				<label>Image</label>
 				<input
 					type='text'
 					id='image'
@@ -72,13 +66,7 @@ const AddCreator = () => {
 					required
 				/>
 
-				<label>
-					Description
-					<p>
-						Provide a description of the creator. Who are they? What makes them
-						interesting?
-					</p>
-				</label>
+				<label>Description</label>
 				<textarea
 					name='description'
 					rows='3'
@@ -90,11 +78,9 @@ const AddCreator = () => {
 				></textarea>
 
 				<h3>Social Media Links</h3>
-				<p>Provide at least one of the creator's social media links.</p>
 
 				<label>
-					<span className='fa-brands fa-youtube'></span> YouTube
-					<p>The creator's YouTube handle (without the @)</p>
+					<span className='fab fa-youtube'></span> YouTube
 				</label>
 				<input
 					type='text'
@@ -105,8 +91,7 @@ const AddCreator = () => {
 				/>
 
 				<label>
-					<span className='fa-brands fa-twitter'></span> Twitter
-					<p>The creator's Twitter handle (without the @)</p>
+					<span className='fab fa-twitter'></span> Twitter
 				</label>
 				<input
 					type='text'
@@ -117,8 +102,7 @@ const AddCreator = () => {
 				/>
 
 				<label>
-					<span className='fa-brands fa-instagram'></span> Instagram
-					<p>The creator's Instagram handle (without the @)</p>
+					<span className='fab fa-instagram'></span> Instagram
 				</label>
 				<input
 					type='text'

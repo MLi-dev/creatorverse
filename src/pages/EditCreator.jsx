@@ -92,13 +92,7 @@ const EditCreator = ({ data }) => {
 					required
 				/>
 
-				<label>
-					imageURL
-					<p>
-						Provide a link to an imageURL of your creator. Be sure to include
-						the http://
-					</p>
-				</label>
+				<label>imageURL</label>
 				<input
 					type='text'
 					id='imageURL'
@@ -108,13 +102,7 @@ const EditCreator = ({ data }) => {
 					required
 				/>
 
-				<label>
-					Description
-					<p>
-						Provide a description of the creator. Who are they? What makes them
-						interesting?
-					</p>
-				</label>
+				<label>Description</label>
 				<textarea
 					name='description'
 					rows='3'
@@ -126,11 +114,9 @@ const EditCreator = ({ data }) => {
 				></textarea>
 
 				<h3>Social Media Links</h3>
-				<p>Provide at least one of the creator's social media links.</p>
 
 				<label>
-					<span className='fa-brands fa-youtube'></span> YouTube
-					<p>The creator's YouTube handle (without the @)</p>
+					<span className='fab fa-youtube'></span> YouTube
 				</label>
 				<input
 					type='text'
@@ -141,8 +127,7 @@ const EditCreator = ({ data }) => {
 				/>
 
 				<label>
-					<span className='fa-brands fa-twitter'></span> Twitter
-					<p>The creator's Twitter handle (without the @)</p>
+					<span className='fab fa-twitter'></span> Twitter
 				</label>
 				<input
 					type='text'
@@ -153,8 +138,7 @@ const EditCreator = ({ data }) => {
 				/>
 
 				<label>
-					<span className='fa-brands fa-instagram'></span> Instagram
-					<p>The creator's Instagram handle (without the @)</p>
+					<span className='fab fa-instagram'></span> Instagram
 				</label>
 				<input
 					type='text'
@@ -181,10 +165,10 @@ const EditCreator = ({ data }) => {
 				className='delete-modal'
 				overlayClassName='overlay'
 			>
-				<h2>⚠️ WAIT!!!! ⚠️</h2>
-				<p>Are you sure you want to delete {creator.name}???</p>
-				<button onClick={closeModal}>Nah, never mind</button>
-				<button onClick={deleteCreator}>YES! Totally sure</button>
+				<h2>⚠️ Final confirmation ⚠️</h2>
+				<p>Are you absolutely sure you want to delete {creator.name}???</p>
+				<button onClick={closeModal}>No</button>
+				<button onClick={deleteCreator}>Yes</button>
 			</Modal>
 		</div>
 	);

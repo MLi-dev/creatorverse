@@ -4,12 +4,26 @@ import { supabase } from "../client";
 import Card from "../components/Card";
 
 const ViewCreator = ({ data }) => {
+	const navYouTube = () => {
+		window.open("https://www.youtube.com/@" + creator.youtube, "_blank");
+	};
+
+	const navTwitter = () => {
+		window.open("https://www.twitter.com/" + creator.twitter, "_blank");
+	};
+
+	const navInstagram = () => {
+		window.open("https://www.instagram.com/" + creator.instagram, "_blank");
+	};
 	const { id } = useParams();
 	const [creator, setCreator] = useState({
 		id: null,
 		name: "",
+		youtube: "",
+		twitter: "",
+		instagram: "",
 		description: "",
-		image: "",
+		imageURL: "",
 	});
 
 	useEffect(() => {
@@ -21,7 +35,7 @@ const ViewCreator = ({ data }) => {
 			twitter: result.twitter,
 			instagram: result.instagram,
 			description: result.description,
-			image: result.image,
+			imageURL: result.imageURL,
 		});
 	}, [data, id]);
 
@@ -38,12 +52,35 @@ const ViewCreator = ({ data }) => {
 	return (
 		<div className='ViewCreator'>
 			<section className='creator-image'>
-				<img src={creator.image} alt={creator.name} />
+				<img src={creator.imageURL} alt={creator.name} />
 			</section>
 
 			<section className='creator-info'>
 				<h2>{creator.name}</h2>
 				<p>{creator.description}</p>
+				{creator.youtube !== null && creator.youtube !== "" ? (
+					<button className='social-button' onClick={navToYouTube}>
+						<i className='fab fa-youtube'></i>@{creator.youtube}
+					</button>
+				) : (
+					""
+				)}
+
+				{creator.twitter !== null && creator.twitter !== "" ? (
+					<button className='social-button' onClick={navToTwitter}>
+						<i className='fab fa-twitter'></i>@{creator.twitter}
+					</button>
+				) : (
+					""
+				)}
+
+				{creator.instagram !== null && creator.instagram !== "" ? (
+					<button className='social-button' onClick={navToInstagram}>
+						<i className='fab fa-instagram'></i>@{creator.instagram}
+					</button>
+				) : (
+					""
+				)}
 			</section>
 
 			<section className='modify-creator'>
