@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useRoutes } from "react-router-dom";
-import Main from "./components/Main";
 import EditCreator from "./pages/EditCreator";
 import AddCreator from "./pages/AddCreator";
 import ViewCreator from "./pages/ViewCreator";
